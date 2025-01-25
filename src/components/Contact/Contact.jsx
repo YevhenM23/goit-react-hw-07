@@ -1,12 +1,11 @@
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import s from "./Contact.module.css";
+import { deleteContact } from "../../redux/contactsOps";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-
   return (
     <div className={s.contactWrapper}>
       <FaUser /> {contact.name}
